@@ -20,13 +20,35 @@ https://webmail.hermes.cam.ac.uk/
 
 From a terminal, type:
 
-    ssh ...
+    ssh -Y sje30@subliminal.maths.cam.ac.uk # change to your CRSID
+
+(-Y means that you can run X11, i.e. graphical windows, over the connection.)
+
+
 ## Setting up COMPBIO area on subiculum
 
-This allows you to run other software.
+This allows you to run other COMPBIO software by extending your $PATH variable:
 
-Check that you can now run R and other tools.
 
+One time only you will need to run the following program to configure
+your logins:
+
+    /alt/applic/user-maint/sje30/COMPBIO/compbio_runmeonce.sh
+
+Hint: hit TAB to complete filenames.
+
+Logout and then log back in to subliminal for changes to take effect.
+
+Check that you can now run R and other tools:
+
+    R
+    4*2
+    require(limma)
+
+Ctrl-D to exit R.  Then try rstudio:
+
+    rstudio
+	
 
 ## Rstudio over the network
 
@@ -36,7 +58,11 @@ As long as you have a browser, you can calculate...!
 
 ## Managing your files
 
-1. quota
+    quota
+
+Bad news: not much quota by default (although can ask for more).
+
+Good news: backed up.
 
 
 On subiculum you can make:
@@ -47,6 +73,7 @@ Check
 [permissions](https://en.wikipedia.org/wiki/File_system_permissions)
 if you have anything private (e.g. coursework).
 
+See also "store-space".
 
 # Top commands to explore
 
